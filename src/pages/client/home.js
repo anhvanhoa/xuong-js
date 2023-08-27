@@ -87,10 +87,10 @@ const home = () => {
                 <div>
                     <swiper-container class="mySwiper" pagination="true">
                         <swiper-slide>
-                            <img class="tw-h-[760px] tw-object-cover tw-w-full" src="https://ananas.vn/wp-content/uploads/Web1920-1.jpeg" alt=""/>
+                            <img class="tw-object-cover tw-w-full" src="https://ananas.vn/wp-content/uploads/Web1920-1.jpeg" alt=""/>
                         </swiper-slide>
                         <swiper-slide>
-                            <img class="tw-h-[760px] tw-object-cover tw-w-full" src="https://ananas.vn/wp-content/uploads/Hi-im-Mule_1920x1050-Desktop.jpg" alt=""/>
+                            <img class="tw-object-cover tw-w-full" src="https://ananas.vn/wp-content/uploads/Hi-im-Mule_1920x1050-Desktop.jpg" alt=""/>
                         </swiper-slide>
                     </swiper-container>
                 </div>

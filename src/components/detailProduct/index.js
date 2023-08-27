@@ -1,22 +1,22 @@
 import generalInformation from '~/components/generalInformation';
 const detailProduct = (product = {}) => {
     return `
-        <div class="tw-max-w-[1440px] tw-mx-auto tw-px-4 tw-mt-10 tw-gap-16 tw-grid tw-grid-cols-2">
+        <div class="tw-max-w-[1440px] tw-mx-auto tw-px-4 tw-mt-10 tw-gap-16 tw-grid tw-grid-cols-1 lg:tw-grid-cols-2">
             <div>
                 <img 
-                    class="tw-h-[550px] tw-w-full tw-object-cover thumbnail"
-                    src="${product.thumbnail}" \
+                    class="tw-h-[400px] tw-w-full tw-object-cover thumbnail sm:tw-h-[500px] md:tw-h-[550px]"
+                    src="${product.thumbnail}"
                     alt="${product.title}"
                 />
                 <div class="tw-mt-6 tw-relative">
                     <swiper-container class="mySwiper" space-between="0" slides-per-view="4">
-                        <swiper-slide><img id="list-image" class="tw-w-full tw-h-[168px] tw-object-cover" src="${
+                        <swiper-slide><img id="list-image" class="tw-w-full tw-h-[130px] tw-object-cover" src="${
                             product.thumbnail
                         }"/></swiper-slide>
                         ${product.list_image
                             .map(
                                 (element) => `
-                                <swiper-slide><img id="list-image" class="tw-w-full tw-h-[168px] tw-object-cover" src="${element}"/></swiper-slide>
+                                <swiper-slide><img id="list-image" class="tw-w-full tw-h-[130px] tw-object-cover" src="${element}"/></swiper-slide>
                             `,
                             )
                             .join('')}
@@ -77,7 +77,8 @@ const detailProduct = (product = {}) => {
                     </div>
                     <div class="tw-flex tw-items-center tw-gap-5">
                         <p class="tw-text-lg tw-uppercase">Size</p>
-                        <select class="tw-bg-[#ccc]/30 tw-py-1 tw-px-4 tw-rounded-md">
+                        <select class="tw-bg-[#ccc]/30 tw-py-1 tw-px-4 tw-rounded-md size">
+                            <option class="tw-bg-white" hidden selected>Chọn size</option>
                             ${product?.size.map(
                                 (element) => `<option class="tw-bg-white" value="${element}">${element}</option>`,
                             )}
@@ -85,7 +86,7 @@ const detailProduct = (product = {}) => {
                     </div>
                 </div>
                 <div class="tw-mt-8 tw-flex tw-gap-5">
-                    <button class="tw-w-[70%] tw-bg-primary tw-py-4 tw-text-xl tw-text-white tw-font-medium">Mua Ngay</button>
+                    <button class="tw-w-[70%] tw-bg-primary tw-py-4 tw-text-xl tw-text-white tw-font-medium btn-buy">Mua Ngay</button>
                     <button class="tw-flex-1 tw-bg-black tw-text-white tw-font-medium">Thêm vào giỏ hàng</button>
                 </div>
                 ${generalInformation(product.info)}

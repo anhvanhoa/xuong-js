@@ -1,11 +1,11 @@
 const listFooter = (data = []) => {
     return `
-        <div class="tw-grid tw-grid-cols-4">
+        <div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-4">
             ${data
                 .map(
                     (element) => ` 
                             <div>
-                                <h4 class="tw-text-2xl tw-font-semibold tw-py-3">${element.title}</h4>
+                                <h4 class="tw-text-lg tw-font-semibold tw-py-3">${element.title}</h4>
                                 <ul class="tw-text-[#ccc]">
                                     ${element.children
                                         .map(
